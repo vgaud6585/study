@@ -1,0 +1,26 @@
+      <ul class="navbar-nav me-auto mb-2 mb-md-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/admin/">Admin Panel</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'add' %}">Add Items</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'lastItem' %}">Last Item</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Delete Items</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Edit Items</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'finditem' %}">Find Record</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>

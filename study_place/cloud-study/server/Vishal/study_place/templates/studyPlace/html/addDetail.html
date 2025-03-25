@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block container %}
+{% include 'studyPlace/html/header.html' %}
+
+<main class="form-signin w-100 m-auto">
+  <h1 class="h3 mb-3 fw-normal">Add Items for study</h1>
+  {% include 'studyPlace/html/edit-form.html' %}
+</main>
+
+{% endblock container %}
