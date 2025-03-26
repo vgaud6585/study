@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block container %}
+{% include 'studyPlace/html/header.html' %}
+{% if head %}
+{% for data in head %}
+<ul class="list-group">
+  <li class="list-group-item disabled">{{data.pk}} - {{data.usr_heading}}</li>
+</ul>
+{% endfor %}
+{% endif %}
+
+{% endblock container %}

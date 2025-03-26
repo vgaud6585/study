@@ -59,15 +59,22 @@ def last_item(request):
 def find_item(request):
   obj = None
   if request.method == "POST":
-    get_value = int(request.POST.get("get_id"))
-    obj = get_object_or_404(StudyRecords, pk=get_value)
-    #pt = "studyPlace/html/detail.html"
-    # dt = {
-    #   "sturec": obj,
-    # }
-    #return render(request, pt, dt)
+    try:
+      get_value = int(request.POST.get("get_id"))
+      obj = get_object_or_404(StudyRecords, pk=get_value)
+    except:
+      obj = get_object_or_404(StudyRecords, pk=1)
   pt = "studyPlace/html/find.html"
   dt = {
     "sturec": obj,
+  }
+  return render(request, pt, dt)
+  
+def heading(request):
+  head = StudyRecords.objects.all()
+  pt = "studyPlace/html/heading.html"
+  dt = {
+    "head":head,
+    
   }
   return render(request, pt, dt)
